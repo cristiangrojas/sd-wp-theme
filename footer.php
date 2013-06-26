@@ -8,6 +8,8 @@
 
 </div><!-- #wrap -->
 
+<div class="clearfix"></div>
+
 <div id="footer">
     <div class="container">
         <!-- <h1>Cotiza, Compara y Elige</h1> -->
