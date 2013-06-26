@@ -733,3 +733,8 @@ blockquote.pull-left{
 		padding-right: 0;
 	}
 }
+
+
+article ul {
+    margin-left: 20px;
+}
