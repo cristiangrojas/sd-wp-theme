@@ -8021,7 +8021,7 @@ a.badge:hover {
     position: fixed;
 }
 ul {
-    list-style: none;
+    /*list-style: none;*/
     margin: 0;
 }
 .google-map img {
