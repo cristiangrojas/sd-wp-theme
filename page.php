@@ -1,55 +1,34 @@
-<?php get_header(); ?>
-			
-			<div id="content" class="clearfix row-fluid">
-			
-				<div id="main" class="span8 clearfix" role="main">
+<?php
+/**
+ * Template Name: Default Page
+ * Description: Page template with a content container and right sidebar.
+ *
+ * @package WordPress
+ * @subpackage BootstrapWP
+ */
+get_header(); ?>
+<?php while (have_posts()) : the_post(); ?>
 
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-						
-						<header>
-							
-							<div class="page-header"><h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1></div>
-						
-						</header> <!-- end article header -->
-					
-						<section class="post_content clearfix" itemprop="articleBody">
-							<?php the_content(); ?>
-					
-						</section> <!-- end article section -->
-						
-						<footer>
-			
-							<?php the_tags('<p class="tags"><span class="tags-title">' . __("Tags","bonestheme") . ':</span> ', ', ', '</p>'); ?>
-							
-						</footer> <!-- end article footer -->
-					
-					</article> <!-- end article -->
-					
-					<?php comments_template('',true); ?>
-					
-					<?php endwhile; ?>		
-					
-					<?php else : ?>
-					
-					<article id="post-not-found">
-					    <header>
-					    	<h1><?php _e("Not Found", "bonestheme"); ?></h1>
-					    </header>
-					    <section class="post_content">
-					    	<p><?php _e("Sorry, but the requested resource was not found on this site.", "bonestheme"); ?></p>
-					    </section>
-					    <footer>
-					    </footer>
-					</article>
-					
-					<?php endif; ?>
-			
-				</div> <!-- end #main -->
-    
-				<?php get_sidebar(); // sidebar 1 ?>
-    
-			</div> <!-- end #content -->
+  <div class="container">
+    <div class="row">
+        <div class="span12">
+            <?php if (function_exists('bootstrapwp_breadcrumbs')) {
+            bootstrapwp_breadcrumbs();
+        } ?>
+        </div><!--/.span12 -->
+    </div><!--/.row -->
 
-<?php get_footer(); ?>
+    <header class="page-title">
+        <h1><?php the_title();?></h1>
+    </header>
+
+  <div class="row content">
+    <div class="span8">
+        <?php the_content(); ?>
+        <?php wp_link_pages( array('before' => '<div class="page-links">' . __('Pages:', 'bootstrapwp'), 'after' => '</div>')); ?>
+        <?php edit_post_link(__('Edit', 'bootstrapwp'), '<span class="edit-link">', '</span>'); ?>
+        <?php endwhile; // end of the loop. ?>
+    </div><!-- /.span8 -->
+
+    <?php get_sidebar(); ?>
+    <?php get_footer(); ?>
