@@ -8,7 +8,7 @@
 
 get_header(); ?>
 			
-			<div id="content" class="clearfix row-fluid">
+			<div id="content" class="row">
 			
 				<div id="main" class="span8 clearfix" role="main">
 
