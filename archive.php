@@ -1,60 +1,98 @@
 <?php get_header(); ?>
+			
+			<div id="content" class="clearfix row-fluid">
+			
+				<div id="main" class="span8 clearfix" role="main">
+				
+					<div class="page-header">
+					<?php if (is_category()) { ?>
+						<h1 class="archive_title h2">
+							<span><?php _e("Posts Categorized:", "bonestheme"); ?></span> <?php single_cat_title(); ?>
+						</h1>
+					<?php } elseif (is_tag()) { ?> 
+						<h1 class="archive_title h2">
+							<span><?php _e("Posts Tagged:", "bonestheme"); ?></span> <?php single_tag_title(); ?>
+						</h1>
+					<?php } elseif (is_author()) { ?>
+						<h1 class="archive_title h2">
+							<span><?php _e("Posts By:", "bonestheme"); ?></span> <?php get_the_author_meta('display_name'); ?>
+						</h1>
+					<?php } elseif (is_day()) { ?>
+						<h1 class="archive_title h2">
+							<span><?php _e("Daily Archives:", "bonestheme"); ?></span> <?php the_time('l, F j, Y'); ?>
+						</h1>
+					<?php } elseif (is_month()) { ?>
+					    <h1 class="archive_title h2">
+					    	<span><?php _e("Monthly Archives:", "bonestheme"); ?>:</span> <?php the_time('F Y'); ?>
+					    </h1>
+					<?php } elseif (is_year()) { ?>
+					    <h1 class="archive_title h2">
+					    	<span><?php _e("Yearly Archives:", "bonestheme"); ?>:</span> <?php the_time('Y'); ?>
+					    </h1>
+					<?php } ?>
+					</div>
 
-<div class="page_heading no_margin_top">
-<h1>
-<?php _e('Archive for '); ?>
-<?php if (is_category()){ ?>
-<?php echo ""; ?>
-<?php single_cat_title();  echo "";} 
-elseif (is_month()) { ?>
-<?php  echo the_time('F, Y'); ?>
-<?php } elseif(is_author()){ _e('Author Archive',skyali);  ?>
-<?php } else if(is_day()){ the_time('F jS, Y');  ?>
-<?php } else if(is_year()){ the_time('Y'); ?>
-<?php } elseif(is_tag()){ echo  _e('Tag Archives:',skyali); echo  '\''.single_tag_title(' \' ', true, '');  } ?><?php _e(''); ?></h1></div>
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+						
+						<header>
+							
+							<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+							
+							<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php the_category(', '); ?>.</p>
+						
+						</header> <!-- end article header -->
+					
+						<section class="post_content">
+						
+							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
+						
+							<?php the_excerpt(); ?>
+					
+						</section> <!-- end article section -->
+						
+						<footer>
+							
+						</footer> <!-- end article footer -->
+					
+					</article> <!-- end article -->
+					
+					<?php endwhile; ?>	
+					
+					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
+						
+						<?php page_navi(); // use the page navi function ?>
 
-<?php 
-
-$num_of_posts = $wp_query->post_count; 
-
-$i = 1;
-
-?>
-
-<?php while (have_posts()) : the_post(); ?>	
-
-<div class="list_category">
-
-<?php if (  (function_exists('has_post_thumbnail')) && (has_post_thumbnail())  ) { ?>
-
-<?php $image_id = get_post_thumbnail_id();  $image_url = wp_get_attachment_image_src($image_id,'large');  $image_url = $image_url[0]; ?>
-
-<?php $blogurl = get_template_directory_uri() ; //$image_url = str_replace($blogurl, '', $image_url); ?>
-
-<div class="image"><a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/thumb.php?src=<?php echo $image_url; ?>&amp;w=277&amp;h=118&amp;zc=1&amp;q=100" width="277" height="118" alt="<?php the_title(); ?>" class="imgf" /></a></div><!-- #image -->
-
-<?php } ?>
-
-<div class="information">
-
-<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-
-<div class="date"><?php _e('Posted On:', 'skyali'); ?> <?php the_time('F d, '); ?><?php the_time(' Y'); ?></div>
-
-<p><?php echo excerpt(19); ?><?php _e(' [...]', 'skyali'); ?></p>
-
-</div><!-- #information -->
-
-</div><!-- #list_category -->
-
-<?php if($i != $num_of_posts){ ?><?php } ?>
-
-<?php $i++; ?>
-
-<?php endwhile; ?>
-
-<?php  skyali_pagination(); ?>
-
-<?php get_sidebar(); ?>
+					<?php } else { // if it is disabled, display regular wp prev & next links ?>
+						<nav class="wp-prev-next">
+							<ul class="clearfix">
+								<li class="prev-link"><?php next_posts_link(_e('&laquo; Older Entries', "bonestheme")) ?></li>
+								<li class="next-link"><?php previous_posts_link(_e('Newer Entries &raquo;', "bonestheme")) ?></li>
+							</ul>
+						</nav>
+					<?php } ?>
+								
+					
+					<?php else : ?>
+					
+					<article id="post-not-found">
+					    <header>
+					    	<h1><?php _e("No Posts Yet", "bonestheme"); ?></h1>
+					    </header>
+					    <section class="post_content">
+					    	<p><?php _e("Sorry, What you were looking for is not here.", "bonestheme"); ?></p>
+					    </section>
+					    <footer>
+					    </footer>
+					</article>
+					
+					<?php endif; ?>
+			
+				</div> <!-- end #main -->
+    
+				<?php get_sidebar(); // sidebar 1 ?>
+    
+			</div> <!-- end #content -->
 
 <?php get_footer(); ?>

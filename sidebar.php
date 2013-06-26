@@ -1,23 +1,19 @@
-</div><!-- #left -->
+				<div id="sidebar1" class="fluid-sidebar sidebar span4" role="complementary">
+				
+					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 
-<div id="right">
+						<?php dynamic_sidebar( 'sidebar1' ); ?>
 
-<?php dynamic_sidebar( 'primary-widget-area' ); ?>
+					<?php else : ?>
 
-<div class="left_column">
+						<!-- This content shows up if there are no widgets defined in the backend. -->
+						
+						<div class="alert alert-message">
+						
+							<p><?php _e("Please activate some Widgets","bonestheme"); ?>.</p>
+						
+						</div>
 
-<?php dynamic_sidebar( 'sidebar-column-left' ); ?>
+					<?php endif; ?>
 
-</div><!-- #left_column -->
-
-<div class="right_column">
-
-<?php dynamic_sidebar( 'sidebar-column-right' ); ?>
-
-</div><!-- #right_column -->
-
-<?php dynamic_sidebar( 'secondary-widget-area' ); ?>
-
-</div><!-- #right -->
-
-
+				</div>
