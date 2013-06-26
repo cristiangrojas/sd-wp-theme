@@ -746,6 +746,11 @@ article {
     line-height: 26px;
 }
 
+article ul li {
+    font-size: 16px;
+    line-height: 26px;
+}
+
 article p {
     margin-bottom: 20px;
     text-align: justify;
