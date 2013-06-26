@@ -31,7 +31,7 @@
 		<!-- end of wordpress head -->
 
 		<!-- theme options from options panel -->
-		<?php get_wpbs_theme_options(); ?>
+		<?php // get_wpbs_theme_options(); ?>
 
 		<!-- typeahead plugin - if top nav search bar enabled -->
 		<?php require_once('library/typeahead.php'); ?>
