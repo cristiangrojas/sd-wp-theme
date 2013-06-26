@@ -736,5 +736,17 @@ blockquote.pull-left{
 
 
 article ul {
+    list-style: circle;
     margin-left: 20px;
+}
+
+article {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 26px;
+}
+
+article p {
+    margin-bottom: 20px;
+    text-align: justify;
 }
