@@ -1,5 +1,4 @@
 		</div> <!-- end #container -->
-    </div> <!-- end #wrap -->
     <div class="clearfix"></div>
     <div id="footer">
         <div class="container">

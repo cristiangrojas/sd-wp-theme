@@ -40,7 +40,6 @@
 
 	<body <?php body_class(); ?>>
 
-		<div id="wrap">
             <div id="sd-header" class="navbar no-navbar-fixed-top">
                 <div class="navbar-inner">
                     <div class="container">
