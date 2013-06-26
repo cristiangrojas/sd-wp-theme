@@ -6,6 +6,8 @@
 
 </div><!-- #center -->
 
+</div><!-- #wrap -->
+
 <div id="footer">
     <div class="container">
         <!-- <h1>Cotiza, Compara y Elige</h1> -->

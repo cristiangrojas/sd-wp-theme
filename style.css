@@ -1399,17 +1399,17 @@ ol#comments li ul li ul li ul li ul li div.comment div.comment_holder{
 
 /* Footer Holder */
 
-#footer_holder{
+/*#footer_holder{
 	clear:both;
 	overflow:hidden;
 	width:100%;
 	background:#262626;
 	padding-bottom:30px;
-}
+}*/
 
 /* Footer */
 
-#footer{
+/*#footer{
 	margin:0 auto;
 	width:960px;
 	padding-top:30px;
@@ -1447,9 +1447,9 @@ ol#comments li ul li ul li ul li ul li div.comment div.comment_holder{
 	padding-bottom:8px;
 }
 
-/*#footer a:hover img{
+*//*#footer a:hover img{
 	border:1px solid #a3a3a3 !important;
-}*/
+}*//*
 
 #footer .column_1, #footer .column_2, #footer .column_3{
 	width:225px;
@@ -1573,7 +1573,7 @@ ol#comments li ul li ul li ul li ul li div.comment div.comment_holder{
 	padding:4px;
 	margin-left:20px;
 	margin-bottom:20px;
-}
+}*/
 
 
 /* Contact Page */
