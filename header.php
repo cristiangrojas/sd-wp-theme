@@ -78,4 +78,4 @@
                     </div>
                 </div>
             </div>
-    		<div id="container" class="container-fluid">
+    		<div id="container" class="container">
