@@ -762,14 +762,6 @@ article p {
 
 
 
-div#pages-2 {}
-div#pages-2 ul.children { display: block; margin-left: 10px;}
-
-
-
-
-
-
 /*
 * CONTAINER BORDER TRICK
 * ----------------------
@@ -800,3 +792,11 @@ div#container:before {
     height: 100%;
     background-color: white;
 }
+
+
+
+/*
+* ASEGURADORAS EN COLOMBIA
+* ------------------------
+*/
+li#aseguradoras > ul.children > li > ul.children { display: none; }

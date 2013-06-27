@@ -604,11 +604,17 @@ if( !function_exists( "theme_js" ) ) {
       get_template_directory_uri() . '/library/js/modernizr.full.min.js', 
       array('jquery'), 
       '1.2' );
+
+      wp_register_script(  'aseguradoras',
+          get_template_directory_uri() . '/library/js/aseguradoras-en-colombia.js',
+          array('jquery'),
+          '1.2' );
   
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('wpbs-scripts');
     wp_enqueue_script('modernizr');
-    
+    wp_enqueue_script('aseguradoras');
+
   }
 }
 add_action( 'wp_enqueue_scripts', 'theme_js' );
