@@ -806,6 +806,6 @@ li#aseguradoras a {
 li#aseguradoras ul.children {
     margin-left: 15px;
 }
-li#aseguradoras > ul.children > li > ul.children {
+ul#main-children > li > ul.children {
     display: none;
 }
