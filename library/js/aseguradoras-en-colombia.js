@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
         self.children('a').addClass('collapse');
     });
 
-    $('ul#main-children').on('click', 'a.collapse', function(e){
+    /*$('ul#main-children').on('click', 'a.collapse', function(e){
         e.preventDefault();
 
         var self = $(this);
@@ -20,5 +20,5 @@ jQuery(document).ready(function($) {
         } else {
             self.closest('ul.children').hide();
         }
-    });
+    });*/
 });
