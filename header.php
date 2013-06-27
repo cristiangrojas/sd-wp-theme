@@ -49,14 +49,14 @@
                             <span class="icon-bar"></span>
                         </a>
                         <div itemscope itemtype="http://schema.org/Organization" class="brand">
-                            <a itemprop="url" href="/">
+                            <a itemprop="url" href="/info/">
                                 <img itemprop="logo" src="/static/img/logo-sd.png" />
                             </a>
                         </div>
                         <!-- <a class="brand" href="/"><img src="/static/img/logo-sd.png"></a> -->
                         <div class="nav-collapse collapse">
                             <ul class="nav">
-                                <li><a href="/">Inicio</a></li>
+                                <li><a href="/info/">Inicio</a></li>
                                 <li><a href="/seguros-para-vehiculos/">Seguros para vehículos</a></li>
                                 <li><a href="/ayuda/">Ayuda</a></li>
 
