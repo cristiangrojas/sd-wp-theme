@@ -1,4 +1,6 @@
-		</div> <!-- end #container -->
+</div> <!-- #container -->
+</div> <!-- .row -->
+</div> <!-- .container -->
     <div class="clearfix"></div>
     <div id="footer">
         <div class="container">

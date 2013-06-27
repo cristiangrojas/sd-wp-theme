@@ -78,4 +78,6 @@
                     </div>
                 </div>
             </div>
-    		<div id="container" class="container">
+            <div class="container">
+            <div class="row">
+                <div id="container" class="span10 offset1">

@@ -2,7 +2,7 @@
 			
 			<div id="content" class="row">
 			
-				<div id="main" class="span8 clearfix" role="main">
+				<div id="main" class="span7 clearfix" role="main">
 				
 					<div class="page-header">
 					<?php if (is_category()) { ?>

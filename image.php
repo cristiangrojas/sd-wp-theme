@@ -10,7 +10,7 @@ get_header(); ?>
 			
 			<div id="content" class="row">
 			
-				<div id="main" class="span8 clearfix" role="main">
+				<div id="main" class="span7 clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					

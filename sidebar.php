@@ -1,4 +1,4 @@
-<div id="sidebar1" class="fluid-sidebar sidebar span4" role="complementary">
+<div id="sidebar1" class="fluid-sidebar sidebar span3" role="complementary">
 
     <div id="quote-now-button" class="widget widget-quote-button clearfix">
         <h3 class="nmt mb5 center">Seguros para Vehículos</h3>
