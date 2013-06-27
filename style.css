@@ -779,18 +779,24 @@ div#container {
     background-color: white;
     padding: 50px 0 30px 0;
     margin-top: -20px;
-    z-index: 10;
 }
 div#container:after {
     display: block;
     content: "";
     position: absolute;
-    left: 0;
+    left: -20px;
     top: 0;
-    width: 100%;
+    width: 20px;
     height: 100%;
-    margin-left: -20px;
-    border-left: 20px solid white;
-    border-right: 20px solid white;
-    z-index: 5;
+    background-color: white;
+}
+div#container:before {
+    display: block;
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background-color: white;
 }
