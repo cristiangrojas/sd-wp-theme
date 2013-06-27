@@ -8,8 +8,8 @@
             <li class="no-margin"><i class="icon-ok icon-2x orange"></i><span class="lead">Compara precios y coberturas</span></li>
             <li class="no-margin"><i class="icon-ok icon-2x orange"></i><span class="lead">Solicita tu póliza desde tu casa</span></li>
         </ul>
-        <div class="row-fluid">
-            <a href="/seguros-para-vehiculos/aplicar/" class="btn btn-primary btn-large">Cotizar en línea</a>
+        <div class="row-fluid center">
+            <a href="/seguros-para-vehiculos/aplicar/" class="btn btn-primary btn-large center">¡Cotiza ahora!</a>
         </div>
     </div>
 
