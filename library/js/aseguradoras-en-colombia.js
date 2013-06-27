@@ -16,15 +16,9 @@ jQuery(document).ready(function($) {
         self.toggleClass('open');
 
         if( self.hasClass('open') ){
-            self.siblings('ul.children').show({
-                easing: 'easeOutQuart',
-                duration: 200
-            });
+            self.siblings('ul.children').show();
         } else {
-            self.siblings('ul.children').hide({
-                easing: 'easeOutQuart',
-                duration: 200
-            });
+            self.siblings('ul.children').hide();
         }
     });
 });
