@@ -1,7 +1,7 @@
 <div id="sidebar1" class="fluid-sidebar sidebar span4" role="complementary">
 
     <div id="quote-now-button" class="widget widget-quote-button clearfix">
-        <h3 class="nmt mb10 center">Seguros para Vehículos</h3>
+        <h2 class="nmt mb5 center">Seguros para Vehículos</h2>
         <h4 class="nmt mb20 center">Cotiza en línea tu seguro todo riesgo</h4>
         <ul class="unstyled mb20">
             <li class="no-margin"><i class="icon-ok icon-2x orange"></i><span class="lead">Cotiza en menos de <strong>5 minutos!</strong></span></li>
