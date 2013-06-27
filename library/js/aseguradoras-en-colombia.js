@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
         self.children('a').addClass('piricuiclo');
     });
 
-    $('ul#main-children').on('click', 'a.piricuiclo', function(e){
+    $('li#aseguradoras').on('click', 'a.piricuiclo', function(e){
         e.preventDefault();
 
         var self = $(this);
