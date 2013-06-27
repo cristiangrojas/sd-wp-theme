@@ -6,10 +6,10 @@ jQuery(document).ready(function($) {
 
     $('ul#main-children > li').each(function(){
         var self = $(this);
-        self.children('a').addClass('hijueputa');
+        self.children('a').addClass('piricuiclo');
     });
 
-    /*$('ul#main-children').on('click', 'a.collapse', function(e){
+    $('ul#main-children').on('click', 'a.piricuiclo', function(e){
         e.preventDefault();
 
         var self = $(this);
@@ -20,5 +20,5 @@ jQuery(document).ready(function($) {
         } else {
             self.closest('ul.children').hide();
         }
-    });*/
+    });
 });
