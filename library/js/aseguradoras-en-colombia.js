@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 
     $('ul#main-children > li').each(function(){
         var self = $(this);
-        self.children('a').addClass('collapse');
+        self.children('a').addClass('hijueputa');
     });
 
     /*$('ul#main-children').on('click', 'a.collapse', function(e){
