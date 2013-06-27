@@ -16,9 +16,9 @@ jQuery(document).ready(function($) {
         self.toggleClass('open');
 
         if( self.hasClass('open') ){
-            self.closest('ul.children').show();
+            self.siblings('ul.children').show();
         } else {
-            self.closest('ul.children').hide();
+            self.siblings('ul.children').hide();
         }
     });
 });
