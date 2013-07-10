@@ -99,5 +99,10 @@ jQuery(document).ready(function($) {
 	$('.alert-message').alert();
 	
 	$('.dropdown-toggle').dropdown();
+
+    // Social buttons loaded with socialite
+    $(window).on('load', function(){
+        Socialite.load();
+    });
  
 }); /* end of as page load scripts */
