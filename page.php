@@ -13,9 +13,12 @@
 							<div class="page-header"><h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1></div>
 						
 						</header> <!-- end article header -->
+                        <div style="display: block; text-align: center; margin-bottom: 20px;">
+                            <div style="display: inline-block; float: none; margin: 0 auto;">
+                                <?php the_post_thumbnail( 'wpbs-featured' ); ?>
+                            </div>
+                        </div>
 
-                        <?php the_post_thumbnail( 'wpbs-featured' ); ?>
-					
 						<section class="post_content clearfix" itemprop="articleBody">
 							<?php the_content(); ?>
 					
